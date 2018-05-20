@@ -40,25 +40,25 @@ void setup() {                 //Configura el final de salida
 void loop() {                 //Inicia el bucle del programa
  
   valLdr0 = analogRead(ldr0);   // llegir valor ldr
-  
-  valLdr0 = map(valLdr0, 850,1000 , 0, 255);   // mapejar valor de 0-1023 a 0-255
+ 
+  valLdr0 = map(valLdr0, 0,60 , 0, 255);   // mapejar valor de 0-1023 a 0-255
   
   analogWrite(led0, valLdr0);    // actualitzar l'estat del led
 
   
 
   valLdr1 = analogRead(ldr1);   // llegir valor ldr
-
   
-  valLdr1 = map(valLdr1, 390,860 , 0, 255);   // mapejar valor de 0-1023 a 0-255
+  
+  valLdr1 = map(valLdr1, 310,810 , 0, 255);   // mapejar valor de 0-1023 a 0-255
   
   analogWrite(led1, valLdr1);    // actualitzar l'estat del led
 
   
 
   valLdr2 = analogRead(ldr2);   // llegir valor ldr
-   Serial.println(valLdr2);
-  valLdr2 = map(valLdr2, 300, 770, 0, 255);   // mapejar valor de 0-1023 a 0-255
+  Serial.println(valLdr2);
+  valLdr2 = map(valLdr2, 0, 25, 0, 255);   // mapejar valor de 0-1023 a 0-255
   
   analogWrite(led2, valLdr2);    // actualitzar l'estat del led
  
